@@ -1,0 +1,33 @@
+{
+  "name": "auth0-spa-login",
+  "version": "1.0.0",
+  "description": "an extremely compact webcomponent for log in using auth0",
+  "main": "./src/auth0-spa-login.mjs",
+  "module": "./src/auth0-spa-login.mjs",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "auth0",
+    "oauth02",
+    "webcomponents",
+    "lit-html",
+    "LitElement",
+    "authentication",
+    "authorization",
+    "login"
+  ],
+  "author": "Herbrand Hofker info@kafka.academy",
+  "license": "ISC",
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.13.6",
+    "dotenv": "^8.2.0",
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv-webpack": "^6.0.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0"
+  }
+}
