@@ -2,7 +2,7 @@
   "name": "auth0-spa-login",
   "version": "0.0.1",
   "description": "an extremely compact webcomponent for log in using auth0",
-  "homepage": "https://github.com/kafkaacademy/auth0-spa-login#readme"
+  "homepage": "https://github.com/kafkaacademy/auth0-spa-login#readme",
   "main": "./src/auth0-spa-login.mjs",
   "module": "./src/auth0-spa-login.mjs",
   "scripts": {
