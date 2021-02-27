@@ -18,7 +18,7 @@
     "login"
   ],
   "author": "Herbrand Hofker info@kafka.academy",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.6",
     "dotenv": "^8.2.0",
