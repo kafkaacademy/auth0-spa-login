@@ -1,10 +1,10 @@
 # auth0-spa-login 
 
-An extremely lightweight login button/anchor, to login using www.auth0.com
+An extremely lightweight login html button  or html anchor, to login using www.auth0.com
 
 The look and feel can be customized with css.
 
-The texts login and logout can be changed in your language.
+The texts login and logout can be changed.
 
 auth0-login is framework neutral, and can be used with React, Vue or Angular, or used with vanilla javascript.
 
