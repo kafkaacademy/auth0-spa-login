@@ -43,13 +43,12 @@ and in html
 # demo
 
 the package contains a demo
-download from github https://github.com/kafkaacademy/auth0-login-button
+download from github https://github.com/kafkaacademy/auth0-spa-login
 
 ` cd demo`
 
-add a .env file (see above)
-
-and add domain and client_id to the env file
+edit the .env file 
+and add your domain and client_id to the env file
 
 and then :
  
