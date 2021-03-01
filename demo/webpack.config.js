@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
  
 module.exports = {
     mode: "development",
@@ -17,8 +16,7 @@ module.exports = {
    
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-        new HtmlWebpackPlugin({ title: 'Auth0 LoginButton Demo' }),
-        new Dotenv()
+        new HtmlWebpackPlugin({   template: './src/index.html' })
     ],
     output: {
         filename: '[name].bundle.js',

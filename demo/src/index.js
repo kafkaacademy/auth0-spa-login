@@ -1,39 +1,20 @@
 import './index.css'
 import { } from 'auth0-spa-login'
 
-if (process.env.domain == null)
-    alert("environment domain of auth0 not set")
-if (process.env.client_id == null)
-    alert("environment client_id of auth0 not set")
-
-
-const h1 = document.body.appendChild(document.createElement("h1"));
-h1.innerText = "Auth0 LoginButton demo";
-
-const p = document.body.appendChild(document.createElement("h3"));
-p.innerHTML = `Only needed in your app: &lt;auth0-button&gt;&lt;/auth0-button&gt;
-    <br>and optional an eventListener:
-    <br>loginButton.addEventListener("user-logged-in", (e) =>{..register user...}
-    <br>An alternative is using anchor &lt;a&gt; , this can be reached by &lt;auth0-anchor&gt;&lt;/auth0-anchor&gt;
-    `;
-
-const loginButton = document.body.appendChild(document.createElement("auth0-anchor"));
-
-loginButton.anchor=true;
-loginButton.domain = process.env.domain;
-loginButton.client_id = process.env.client_id;
+const loginButton = document.getElementsByTagName("auth0-anchor")[0];
+if (loginButton.domain.length < 25)
+    alert("attribute domain not ok: get the domain from www.auth0.com")
+if (loginButton.client_id.length < 32)
+    alert("attribute client_id not ok : get the client_id from www.auth0.com")
 
 loginButton.addEventListener("user-logged-in", (e) => {
-    const old = document.getElementById("jsonContainer")
-    if (old) { old.remove() }
 
-    const jsonContainer = document.body.appendChild(document.createElement("div"));
-    jsonContainer.id = "jsonContainer"
-    const jsonTitle = jsonContainer.appendChild(document.createElement("h1"));
-    jsonTitle.innerText = "Json:";
+    const output = document.getElementById("output");
+    const title = output.appendChild(document.createElement("h1"));
+    title.innerText = "Profile:";
     const json = JSON.parse(e.detail);
-    jsonTitle.title = JSON.stringify(json)
-    const divtbl = jsonContainer.appendChild(document.createElement("table"));
+    title.title = JSON.stringify(json)
+    const divtbl = output.appendChild(document.createElement("table"));
     Object.keys(json).forEach(function (key) {
         const divtr = divtbl.appendChild(document.createElement("tr"));
         let divtd = divtr.appendChild(document.createElement("td"));
