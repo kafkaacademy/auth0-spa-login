@@ -14,6 +14,7 @@ An account at www.auth0.com
 
 ## Installation
 
+
 npm install auth0-spa-login
 
 in your app:
@@ -48,7 +49,7 @@ download from github https://github.com/kafkaacademy/auth0-spa-login
 ` cd demo`
 
 edit the .env file 
-and add your domain and client_id to the env file
+and add your domain and client_id of auth0 to the env file
 
 and then :
  
