@@ -67,7 +67,7 @@ Optional one can add listeners on to get the profile (see also demo)
 
 ```js
     loginButton.addEventListener("user-logged-in", (e) => {
-        const json = JSON.parse(e.detail);
+        const userProfile = JSON.parse(e.detail);
         ...
     })
 ```
@@ -76,10 +76,9 @@ or to be notified of logout
 
 ```js
    loginButton.addEventListener("user-logged-out", (e) => {
-            const profile = JSON.parse(e.detail);
-            alert(`User ${[profile.name]} logged out`)
+        const profile = JSON.parse(e.detail);
+        alert(`User ${[profile.name]} logged out`)
    })
-
 ```
 # demo
 
