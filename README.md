@@ -63,15 +63,24 @@ The login/logout text can be configured:
     </auth0-button>
 ```
 
-Optional one can add a listener on the login event to get the profile (see also demo)
+Optional one can add listeners on to get the profile (see also demo)
 
 ```js
     loginButton.addEventListener("user-logged-in", (e) => {
         const json = JSON.parse(e.detail);
         ...
-    }
+    })
 ```
 
+or to be notified of logout
+
+```js
+   loginButton.addEventListener("user-logged-out", (e) => {
+            const profile = JSON.parse(e.detail);
+            alert(`User ${[profile.name]} logged out`)
+   })
+
+```
 # demo
 
 this package contains a demo
