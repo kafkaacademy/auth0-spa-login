@@ -51,7 +51,7 @@ and in html
     npm start
 ```
 
-### user defined text
+### Your own login/logout labels
 
 The login/logout text can be configured:
 
