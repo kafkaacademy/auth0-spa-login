@@ -14,47 +14,66 @@ An account at www.auth0.com
 
 ## Installation
 
-
-npm install auth0-spa-login
-
+```console
+    npm install auth0-spa-login
+```
 in your app:
-import {} from 'auth0-spa-login'
+
+```javascript
+    import {} from 'auth0-spa-login'
+```
  
 and in html
 
+```html
     <auth0-button
-        domain="...get from autho...>" 
-        user_id="...get from auth0...">
+        domain='...get from auth0...' 
+        user_id='...get from auth0...'>
     </auth0-button>
- 
+ ```
+
  or
 
+```html
     <auth0-anchor
-        domain="...get from autho...>" 
-        user_id="...get from auth0...">
-    </authh0-anchor>
-    
+        domain='...get from autho...' 
+        user_id='...get from auth0...'>
+    </auth0-anchor>
+```
+
  and then :
 
- 
+```console 
     npm install
-    npm run build
     npm start
+```
+
+### user defined text
+
+The login button text con be chahged by setting
+
+```html
+    <auth0-button 
+        loginText='MyLoginText' 
+        logoutText='myLogoutText' 
+        domain='...' client_id='...'>
+    </auth0-button>
+```
 
 # demo
 
 the package contains a demo
 download from github https://github.com/kafkaacademy/auth0-spa-login
 
-` cd demo`
+```console
+    cd demo
+```
 
-edit the .env file 
-and add your domain and client_id of auth0 to the env file
+and edit the file index.html : add your domain and client_id. 
 
 and then :
  
+```console
     npm install
     npm start
-
-
-see .demo/src/index.js how the webcomponent login-button is used
+```
