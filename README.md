@@ -1,6 +1,9 @@
 # auth0-spa-login 
 
 An extremely lightweight login html button  or html anchor, to login using www.auth0.com
+for real Single Page Applications.
+
+No routers, express or ...,  needed.
 
 The look and feel can be customized with css.
 
@@ -50,7 +53,7 @@ and in html
 
 ### user defined text
 
-The login button text con be chahged by setting
+The login/logout text can be configured:
 
 ```html
     <auth0-button 
@@ -60,10 +63,20 @@ The login button text con be chahged by setting
     </auth0-button>
 ```
 
+Optional one can add a listener on the login event to get the profile (see also demo)
+
+```js
+    loginButton.addEventListener("user-logged-in", (e) => {
+        const json = JSON.parse(e.detail);
+        ...
+    }
+```
+
 # demo
 
-the package contains a demo
-download from github https://github.com/kafkaacademy/auth0-spa-login
+this package contains a demo
+
+download : https://github.com/kafkaacademy/auth0-spa-login
 
 ```console
     cd demo
@@ -77,3 +90,13 @@ and then :
     npm install
     npm start
 ```
+
+## Possible use in an SPA with a user defined menu (e.g. navbar):
+
+In a nav bar environment you can make an html dialog around this login button.
+
+At successfull login (listen to event 'user-logged-in') move the button from the dialog to the navbar as logout button.
+
+This can be done by changing the html parent of the button from dialog to the navbar
+
+In this way you do not need routers, to make all completely a real single page application.
