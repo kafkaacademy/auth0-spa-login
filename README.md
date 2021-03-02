@@ -108,3 +108,5 @@ At successfull login (listen to event 'user-logged-in') move the button from the
 This can be done by changing the html parent of the button from dialog to the navbar
 
 In this way you do not need routers, to make all completely a real single page application.
+
+See this example : https://github.com/kafkaacademy/spa-navbar-with-login
