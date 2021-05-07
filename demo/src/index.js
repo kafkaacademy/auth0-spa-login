@@ -1,6 +1,8 @@
 import './index.css'
 import { } from 'auth0-spa-login'
 
+
+
 const loginButton = document.getElementsByTagName("auth0-anchor")[0];
 if (loginButton.domain.length < 25)
     alert("attribute domain not ok: get the domain from www.auth0.com")
@@ -28,3 +30,5 @@ loginButton.addEventListener("user-logged-in", (e) => {
     });
 }
 );
+
+
