@@ -57,8 +57,8 @@ The login/logout text can be configured:
 
 ```html
     <auth0-button 
-        loginText='MyLoginText' 
-        logoutText='myLogoutText' 
+        textLogin='MyLoginText' 
+        textLogout='myLogoutText' 
         domain='...' client_id='...'>
     </auth0-button>
 ```
